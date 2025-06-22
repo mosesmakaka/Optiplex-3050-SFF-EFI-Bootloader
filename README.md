@@ -8,6 +8,11 @@
 > 📦 Comes with `ShowPicker = true` & `HideAuxiliary = false` for easier setup  
 > ✅ Wireless, Bluetooth, Audio, and Graphics acceleration working flawlessly on macOS 15.5
 
+
+![Screenshot 2025-06-22 at 06 46 41](https://github.com/user-attachments/assets/3234014e-d747-4606-b173-fd38e82822d0)
+
+
+
 ---
 
 ## 🚀 Post-Install Instructions
