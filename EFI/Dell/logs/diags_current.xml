@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <SupportAssistPrebootDiagnosticLog>
+    <Schema>1.0.0</Schema>
+    <LogNumber>25</LogNumber>
+    <LogTimeStamp>06/12/2025 21:32:54</LogTimeStamp>
+    <ePSA_Data>
+      <Result>Pass</Result>
+      <ReturnCode>BOOT_SHUTDOWN</ReturnCode>
+      <DevicesTested>Memory, Hard Drive</DevicesTested>
+      <LogData>
+        <ePSALogTimeStamp>06/12/2025 21:32:51</ePSALogTimeStamp>
+        <ePSAVersion>4306.14</ePSAVersion>
+        <ErrorCode>2000:0000</ErrorCode>
+        <ValidationCode>83181</ValidationCode>
+        <ErrorMessage><![CDATA[ePSA quick test pass]]></ErrorMessage>
+      </LogData>
+      <MemRxHealed>FALSE</MemRxHealed>
+      <ePSAInfo><![CDATA[serviceTag=5Z8VXK2&errCode=0000&ValCode=83181&uID=04463]]></ePSAInfo>
+      <ePSAFullVersion>4306.14</ePSAFullVersion>
+      <ePSAInvocationCount>7</ePSAInvocationCount>
+    </ePSA_Data>
+    <BIOS_Data>
+      <ErrorCategory>NO_BOOT</ErrorCategory>
+      <ErrorMessage><![CDATA[No bootable devices found.
+]]></ErrorMessage>
+      <SOS_Available>FALSE</SOS_Available>
+      <TimeOutSeconds>0</TimeOutSeconds>
+    </BIOS_Data>
+  </SupportAssistPrebootDiagnosticLog>
