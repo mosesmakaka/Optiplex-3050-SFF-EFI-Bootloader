@@ -68,22 +68,22 @@ Edit `config.plist` using [ProperTree](https://github.com/corpnewt/ProperTree) o
 
 ## 🧩 Verified PCI Devices (Vendor Breakdown)
 
-| Vendor                  | Device Name                                                         | Class                    | Subclass                  |
-|-------------------------|----------------------------------------------------------------------|--------------------------|---------------------------|
-| **Intel Corporation**   | Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers    | Bridge                   | Host bridge               |
-| **Intel Corporation**   | Intel HD Graphics 630                                                | Display controller       | VGA compatible controller |
-| **Intel Corporation**   | 200 Series/Z370 USB 3.0 xHCI Controller                              | Serial bus controller    | USB controller            |
-| **Intel Corporation**   | 200 Series PCH Thermal Subsystem                                     | Signal processing        | Signal processing         |
-| **Intel Corporation**   | 200 Series PCH CSME HECI #1                                          | Communication controller | Communication controller  |
-| **Intel Corporation**   | 200 Series PCH SATA Controller [AHCI mode]                           | Mass storage controller  | SATA controller           |
-| **Intel Corporation**   | 200 Series PCH PCI Express Root Port #5                              | Bridge                   | PCI bridge                |
-| **Intel Corporation**   | 200 Series PCH PCI Express Root Port #7                              | Bridge                   | PCI bridge                |
-| **Intel Corporation**   | 200 Series PCH LPC Controller (B250)                                 | Bridge                   | ISA bridge                |
-| **Intel Corporation**   | 200 Series/Z370 Power Management Controller                          | Memory controller        | Memory controller         |
-| **Intel Corporation**   | 200 Series PCH HD Audio                                              | Multimedia controller    | Audio device              |
-| **Intel Corporation**   | 200 Series/Z370 SMBus Controller                                     | Serial bus controller    | SMBus                     |
-| **Realtek**             | RTL8111/8168/8411 PCIe Gigabit Ethernet                              | Network controller       | Ethernet controller       |
-| **Broadcom Inc.**       | BCM4360 802.11ac Dual Band Wireless Adapter (Fenvi T919)             | Network controller       | Wireless adapter          |
+| Vendor               | Device Name                                                             | Class                   | Subclass                |
+|----------------------|------------------------------------------------------------------------|-------------------------|-------------------------|
+| **Intel Corporation**| Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers       | Bridge                  | Host bridge             |
+| **Intel Corporation**| Intel HD Graphics 630                                                  | Display controller      | VGA compatible controller |
+| **Intel Corporation**| 200 Series/Z370 USB 3.0 xHCI Controller                                | Serial bus controller   | USB controller          |
+| **Intel Corporation**| 200 Series PCH Thermal Subsystem                                       | Signal processing       | Signal processing       |
+| **Intel Corporation**| 200 Series PCH CSME HECI #1                                            | Communication controller| Communication controller|
+| **Intel Corporation**| 200 Series PCH SATA Controller [AHCI mode]                             | Mass storage controller | SATA controller         |
+| **Intel Corporation**| 200 Series PCH PCI Express Root Port #5                                | Bridge                  | PCI bridge              |
+| **Intel Corporation**| 200 Series PCH PCI Express Root Port #7                                | Bridge                  | PCI bridge              |
+| **Intel Corporation**| 200 Series PCH LPC Controller (B250)                                   | Bridge                  | ISA bridge              |
+| **Intel Corporation**| 200 Series/Z370 Power Management Controller                            | Memory controller       | Memory controller       |
+| **Intel Corporation**| 200 Series PCH HD Audio                                               | Multimedia controller   | Audio device            |
+| **Intel Corporation**| 200 Series/Z370 SMBus Controller                                      | Serial bus controller   | SMBus                   |
+| **Realtek**          | RTL8111/8168/8411 PCIe Gigabit Ethernet                               | Network controller      | Ethernet controller     |
+| **Broadcom Inc.**    | BCM4360 802.11ac Dual Band Wireless Adapter (Fenvi T919)               | Network controller      | Wireless adapter        |
 
 ---
 
