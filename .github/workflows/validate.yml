@@ -1,0 +1,27 @@
+name: Validate OpenCore config
+
+on:
+  pull_request:
+    paths:
+      - 'EFI/OC/config.plist'
+  push:
+    paths:
+      - 'EFI/OC/config.plist'
+
+jobs:
+  ocvalidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl unzip jq
+      - name: Download ocvalidate
+        run: |
+          latest=$(curl -s https://api.github.com/repos/acidanthera/OpenCorePkg/releases/latest | jq -r .tag_name)
+          curl -L -o oc.zip "https://github.com/acidanthera/OpenCorePkg/releases/download/${latest}/OpenCore-${latest}-RELEASE.zip"
+          unzip -d oc oc.zip "Utilities/ocvalidate/ocvalidate.linux"
+          chmod +x oc/Utilities/ocvalidate/ocvalidate.linux
+      - name: Validate config.plist
+        run: oc/Utilities/ocvalidate/ocvalidate.linux EFI/OC/config.plist
