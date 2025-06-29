@@ -60,7 +60,7 @@ struct VirtualSMCKeyValue {
 	 *  @param out   read key data (must be preallocated)
 	 *  @param outsz key data size
 	 *
-	 *  @return true on succesful read
+         *  @return true on successful read
 	 */
 	static bool deserialize(const uint8_t *&src, uint32_t &size, SMC_KEY &name, SMC_DATA *out, SMC_DATA_SIZE &outsz);
 
