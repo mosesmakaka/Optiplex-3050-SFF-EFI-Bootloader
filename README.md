@@ -56,9 +56,9 @@ Edit `config.plist` using [ProperTree](https://github.com/corpnewt/ProperTree) o
 | **CPU**              | Intel Core i3-7100 @ 3.90GHz (Kaby Lake)          |
 | **Cores / Threads**  | 2 Cores / 4 Threads                               |
 | **RAM**              | 8GB DDR4 2400MHz                                  |
-| **Storage**          | Apple SSD (Startup Disk)                          |
+| **Storage**          | Kingston SATA SSD 240GB (Apple SSD - Startup Disk)|
 | **Graphics**         | Intel HD Graphics 630 (1536MB)                    |
-| **Display**          | 1680x1050 (WSXGA+)                                |
+| **Display**          | HDMI & Display Port                               |
 | **Graphics Accel.**  | ✅ Metal 3 Supported / VDA Fully Accelerated      |
 | **Wireless + BT**    | Fenvi T919 (Broadcom BCM94360CD) – Native Support |
 | **Audio Codecs**     | Realtek ALC255, Intel HDA                         |
