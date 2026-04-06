@@ -1,4 +1,4 @@
-# Dell OptiPlex 3050 – macOS Tahoe Workstation (EFI Project)
+# Dell OptiPlex 3050 – macOS Tahoe Workstation (EFI)
 
 ## Overview
 This project transforms the Dell OptiPlex 3050 into a stable, efficient macOS Tahoe workstation using a custom EFI configuration.  
