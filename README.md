@@ -1,132 +1,79 @@
-# 🍏 macOS 15.5 Sequoia Hackintosh – Fenvi T919 Build  
-![macOS](https://img.shields.io/badge/macOS-15.5_Sequoia-blue.svg)
-![Fenvi T919](https://img.shields.io/badge/WiFi-Bluetooth_Ready-green.svg)
-![OpenCore](https://img.shields.io/badge/OpenCore-1.0.4-brightgreen.svg)
-![Status](https://img.shields.io/badge/Build-Stable-success.svg)
+# Dell OptiPlex 3050 – macOS Tahoe Workstation (EFI Project)
 
-> 🛠️ Hackintosh config with full wireless support using **Fenvi T919**  
-> 📦 Comes with `ShowPicker = true` & `HideAuxiliary = false` for easier setup  
-> ✅ Wireless, Bluetooth, Audio, and Graphics acceleration working flawlessly on macOS 15.5
+## Overview
+This project transforms the Dell OptiPlex 3050 into a stable, efficient macOS Tahoe workstation using a custom EFI configuration.  
+It is designed for sustainability, performance optimization, and accessible entry into the Apple ecosystem without requiring official Apple hardware upgrades.
 
 
-![Screenshot 2025-06-22 at 06 46 41](https://github.com/user-attachments/assets/3234014e-d747-4606-b173-fd38e82822d0)
-
-
+<img width="1920" height="1080" alt="Screenshot 2026-04-06 at 13 39 27" src="https://github.com/user-attachments/assets/7f772db1-9192-44f9-8dae-69159822794e" />
 
 ---
 
-## 🚀 Post-Install Instructions
+## Why Repurpose?
 
-### 🔧 Step 1: Disable SIP (System Integrity Protection)
-- Boot into **macOS Recovery** using the OpenCore Picker (`ShowPicker = true`, `HideAuxiliary = false`)
-- From the top menu, open `Utilities > Terminal`
+### 🌱 Sustainability First
+Enterprise desktops are often retired prematurely due to warranty cycles rather than actual performance limits.  
+The Intel Kaby Lake platform in the OptiPlex 3050 remains capable of modern workloads.  
+Repurposing reduces electronic waste and extends hardware lifecycle value.
 
-```bash
-csrutil disable
-```
+### ⚡ Efficiency Gains
+Compared to modern resource-heavy operating systems, macOS provides a streamlined UNIX-based environment with lower background overhead.  
+On this hardware, system responsiveness is optimized for workflow-focused computing.
 
-- Restart back into macOS
+### 💻 Development Access
+This setup enables access to macOS-exclusive tools such as:
+- Xcode
+- Final Cut Pro
+- Logic Pro
 
----
+It provides a cost-effective development environment for Apple ecosystem applications.
 
-### 🛠️ Step 2: Apply Root Patches with OCLP
-1. Open **OpenCore Legacy Patcher (OCLP)** from `/Applications`
-2. Run **Post-Install Root Patch**
-3. Ensure **Modern Wireless Patch** is selected (required for Fenvi T919)
-4. Reboot when done
+### 🏡 Home / Lab Use
+The OptiPlex 3050 form factor and low power consumption make it suitable for:
+- Media servers (Plex / Jellyfin)
+- Time Machine backups
+- Lightweight home automation services
 
----
-
-### 🧹 Optional Cleanup (after successful wireless patch)
-Edit `config.plist` using [ProperTree](https://github.com/corpnewt/ProperTree) or OpenCore Configurator:
-
-| Setting                | Path                             | Final Value |
-|------------------------|----------------------------------|-------------|
-| OpenCore Boot Picker   | Misc > Boot > ShowPicker         | `false`     |
-| Hide Auxiliary Entries | Misc > Boot > HideAuxiliary      | `true`      |
+### 🔒 Privacy-Oriented Computing
+macOS offers strong privacy controls, including on-device processing and reduced telemetry compared to many mainstream consumer operating systems.
 
 ---
 
-## 🧪 Tested Configuration (Verified Working Build)
-
-| Component            | Specification                                     |
-|----------------------|---------------------------------------------------|
-| **macOS Version**    | macOS Sequoia 15.5 (24F74)                        |
-| **Model Identifier** | iMac20,2 (27-inch Retina 5K, 2020) via SMBIOS     |
-| **CPU**              | Intel Core i3-7100 @ 3.90GHz (Kaby Lake)          |
-| **Cores / Threads**  | 2 Cores / 4 Threads                               |
-| **RAM**              | 8GB DDR4 2400MHz                                  |
-| **Storage**          | Kingston SATA SSD 240GB (Apple SSD - Startup Disk)|
-| **Graphics**         | Intel HD Graphics 630 (1536MB)                    |
-| **Display**          | HDMI & Display Port                               |
-| **Graphics Accel.**  | ✅ Metal 3 Supported / VDA Fully Accelerated      |
-| **Wireless + BT**    | Fenvi T919 (Broadcom BCM94360CD) – Native Support |
-| **Audio Codecs**     | Realtek ALC255, Intel HDA                         |
-| **Bootloader**       | OpenCore 1.0.4 (Release Build)                    |
+## Hardware Target
+- Dell OptiPlex 3050
+- Intel 7th Gen Kaby Lake CPU
+- Integrated Intel HD Graphics
+- Standard enterprise SFF configuration
 
 ---
 
-## 🧩 Verified PCI Devices (Vendor Breakdown)
-
-| Vendor               | Device Name                                                             | Class                   | Subclass                |
-|----------------------|------------------------------------------------------------------------|-------------------------|-------------------------|
-| **Intel Corporation**| Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers       | Bridge                  | Host bridge             |
-| **Intel Corporation**| Intel HD Graphics 630                                                  | Display controller      | VGA compatible controller |
-| **Intel Corporation**| 200 Series/Z370 USB 3.0 xHCI Controller                                | Serial bus controller   | USB controller          |
-| **Intel Corporation**| 200 Series PCH Thermal Subsystem                                       | Signal processing       | Signal processing       |
-| **Intel Corporation**| 200 Series PCH CSME HECI #1                                            | Communication controller| Communication controller|
-| **Intel Corporation**| 200 Series PCH SATA Controller [AHCI mode]                             | Mass storage controller | SATA controller         |
-| **Intel Corporation**| 200 Series PCH PCI Express Root Port #5                                | Bridge                  | PCI bridge              |
-| **Intel Corporation**| 200 Series PCH PCI Express Root Port #7                                | Bridge                  | PCI bridge              |
-| **Intel Corporation**| 200 Series PCH LPC Controller (B250)                                   | Bridge                  | ISA bridge              |
-| **Intel Corporation**| 200 Series/Z370 Power Management Controller                            | Memory controller       | Memory controller       |
-| **Intel Corporation**| 200 Series PCH HD Audio                                               | Multimedia controller   | Audio device            |
-| **Intel Corporation**| 200 Series/Z370 SMBus Controller                                      | Serial bus controller   | SMBus                   |
-| **Realtek**          | RTL8111/8168/8411 PCIe Gigabit Ethernet                               | Network controller      | Ethernet controller     |
-| **Broadcom Inc.**    | BCM4360 802.11ac Dual Band Wireless Adapter (Fenvi T919)               | Network controller      | Wireless adapter        |
+## macOS Version
+- macOS Tahoe 26.4 (25E246)
 
 ---
 
-## 🔧 Recommended Kexts
+## Installation Notes
+- EFI is configured for stable boot on supported hardware.
+- Ensure BIOS settings are optimized for macOS compatibility (UEFI mode, disabled secure boot where required).
 
-| Kext                   | Purpose                         | Required |
-|------------------------|----------------------------------|----------|
-| `Lilu.kext`            | Core patching engine             | ✅        |
-| `WhateverGreen.kext`   | iGPU acceleration + framebuffer  | ✅        |
-| `AppleALC.kext`        | Audio codec patching             | ✅        |
-| `RealtekRTL8111.kext`  | Ethernet                         | ✅        |
-| `VirtualSMC.kext`      | Power management & sensors       | ✅        |
-| `SMCBatteryManager.kext` | Battery status (laptops only) | ❌        |
+### Important Patch Requirement
+To ensure full audio functionality:
 
----
-
-## 🗣️ Sprachunterstützung / Language Support
-
-If you're a German-speaking user:
-- Du kannst mir gerne eine Nachricht schicken, wenn du Hilfe beim Setup brauchst.
-- README in Deutsch kommt bald. 🙌
+> Use **MyKextInstaller** to patch `AppleHDA.kext`  
+https://github.com/Mirone/MyKextInstaller/releases/tag/1.8
 
 ---
 
-## 💬 Support & Resources
-
-- 🔗 [OpenCore Legacy Patcher (OCLP)](https://github.com/dortania/OpenCore-Legacy-Patcher)
-- 📖 [OpenCore Vanilla Guide](https://dortania.github.io/OpenCore-Install-Guide/)
-- 🗨️ [Join Dortania on Discord](https://discord.gg/oclp)
+## Tested Status
+This EFI has been validated on Dell OptiPlex 3050 hardware and confirmed to deliver stable operation across all primary system components under macOS Tahoe 26.4 (25E246).
 
 ---
 
-## 🌟 Contribute
-
-If this build worked for you:
-- Leave a ⭐ on this repo  
-- Fork it  
-- Contribute fixes, add BIOS settings, USB maps, etc.
+## Disclaimer
+This project is intended for educational and research purposes.  
+Users are responsible for ensuring compliance with their local software and hardware usage policies.
 
 ---
 
-## 🔐 Disclaimer
-
-This EFI and configuration is for educational and testing purposes only.  
-Ensure you are using macOS legally and ethically.  
-Hackintosh at your own risk.
+## Status
+Stable Build – Production Ready for Supported Hardware
