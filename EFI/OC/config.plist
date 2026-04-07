@@ -9,11 +9,11 @@
 		<key>Model</key>
 		<string>Dell Optiplex 3050</string>
 		<key>OC Version</key>
-		<string>1.0.5 Nightly</string>
+		<string>1.0.7</string>
 		<key>SMBIOS</key>
 		<string>iMac19,2</string>
 		<key>macOS Support</key>
-		<string>macOS Tahoe</string>
+		<string>macOS Tahoe 26</string>
 	</dict>
 	<key>ACPI</key>
 	<dict>
