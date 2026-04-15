@@ -47,8 +47,8 @@ macOS offers strong privacy controls, including on-device processing and reduced
 
 ---
 
-## macOS Version
-- macOS Tahoe 26.4 (25E246)
+## macOS Version Tested
+- macOS Tahoe 26.4.1 (25E253)
 
 ---
 
