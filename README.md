@@ -65,7 +65,7 @@ https://github.com/Mirone/MyKextInstaller/releases/tag/1.8
 ---
 
 ## Tested Status
-This EFI has been validated on Dell OptiPlex 3050 hardware and confirmed to deliver stable operation across all primary system components under macOS Tahoe 26.4 (25E246).
+This EFI has been validated on Dell OptiPlex 3050 hardware and confirmed to deliver stable operation across all primary system components under macOS Tahoe 26.4.1 (25E253).
 
 ---
 
